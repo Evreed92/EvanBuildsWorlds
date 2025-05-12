@@ -1,15 +1,18 @@
+import Link from 'next/link'
+
 export default function BlogLayout({children}:{children:React.ReactNode}){
     return(
         <html>
             <body>
             <nav>
-                <h1>Blog Navigation</h1>
+                <Link href="/">EvanBuildsWorlds</Link>
+                <Link href="blog">Home</Link>
             </nav>
-                <main>{children}</main>
-            </body>
+            <main>{children}</main>
             <footer>
-                <h1>Contact Page</h1>
+                <h1>Contact Zone</h1>
             </footer>
+            </body>
         </html>  
     )
 }
