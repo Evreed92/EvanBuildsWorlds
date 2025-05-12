@@ -18,5 +18,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19"
+  },
+  "compilerOptions":{
+    "baseURL":"src/",
+    "paths":{
+      "@/styles/*": ["styles/*"],
+      "@/components/*":["components/*"]
+    }
   }
 }
