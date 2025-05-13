@@ -2,21 +2,21 @@ import Link from 'next/link'
 import radialStyles from '../appComponents/radialStyles.module.css'
 
 export default function RadialMenu(){ 
-    const radius = 200;
-    const menuItems = ['FIRST', 'SECOND','THIRD', 'FOURTH', 'FIFTH'];
+    const radius = 250;
+    const menuItems = ['Blog', 'Verisium', 'CV', 'Eteria'];
 
     
     return(
         <div className={radialStyles.centerWrapper}>
                 {menuItems.map((item, index) => 
                     {
-                        const angleDegrees = (360/menuItems.length)*index;
+                        const angleDegrees = (360/menuItems.length)*index - 90;
                         const angle = (angleDegrees * Math.PI)/180;
                         const x = radius * Math.cos(angle);
                         const y = radius * Math.sin(angle);
                         return(
                             <Link 
-                                href='blog'
+                                href={item.toLowerCase()}
                                 className={radialStyles.listElement}
                                 style={{ transform: `translate(${x}px, ${y}px)`}}
                             >
